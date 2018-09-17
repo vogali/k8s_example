@@ -1,0 +1,12 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: say-hi-service
+spec:
+  selector:
+    app: say-hi
+    name: berry
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 5000

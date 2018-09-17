@@ -1,0 +1,28 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: say-hi
+  labels:
+    app: say-hi
+    name: berry
+spec:
+  selector:
+    matchLabels:
+      app: say-hi
+      name: berry
+  template:
+    metadata:
+      labels:
+        app: say-hi
+        name: berry
+    spec:
+      containers:
+      - image: eu.gcr.io/sap-p-and-i-big-data-vora/k8s-examples/say-hi:latest
+        name: say-hi
+        env:
+        - name: NAME
+          value: berry
+        ports:
+        - containerPort: 5000
+          name: flask
