@@ -1,7 +1,7 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: say-hi-ext
+  name: say-hi-lb
 spec:
   selector:
     app: say-hi
