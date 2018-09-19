@@ -24,5 +24,9 @@ spec:
         env:
         - name: NAME
           value: {{ required "A valid .Values.name entry required!" .Values.name }}
+        - name: REDIS_HOST
+          value: redis-master.redis
+        - name: REDIS_PORT
+          value: 6379
         ports:
         - containerPort: 5000
