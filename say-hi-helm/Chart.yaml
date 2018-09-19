@@ -1,0 +1,12 @@
+apiVersion: v1
+description: A Helm chart for the say hi
+name: say-hi
+version: 0.0.1
+appVersion: v0.4.9
+keywords:
+- say-hi
+sources:
+- https://github.wdf.sap.corp/I349934/k8s_examples
+maintainers:
+- name: berry
+  email: berry.ban@sap.com

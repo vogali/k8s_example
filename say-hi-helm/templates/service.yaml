@@ -1,0 +1,13 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: say-hi
+spec:
+  selector:
+    app: say-hi
+    name: {{ Values.name }}
+  type: LoadBalancer
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 5000

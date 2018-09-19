@@ -1,0 +1,19 @@
+{{- if .Values.ingress.enabled }}
+
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    kubernetes.io/ingress.class: nginx
+  name: say-hi
+spec:
+  rules:
+  - host: {{ required "ingress.url is required" .Values.ingress.url }}
+    http:
+      paths:
+      - backend:
+          serviceName: say-hi
+          servicePort: 80
+        path: /
+
+{{- end}}

@@ -1,0 +1,13 @@
+replicas: 1
+
+image: eu.gcr.io/sap-p-and-i-big-data-vora/k8s-examples/say-hi:latest
+
+name:
+
+service:
+  type: ClusterIP
+
+ingress:
+  enabled: false
+  url:
+
