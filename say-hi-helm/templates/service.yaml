@@ -5,8 +5,8 @@ metadata:
 spec:
   selector:
     app: say-hi
-    name: {{ Values.name }}
-  type: LoadBalancer
+    name: {{ .Values.name }}
+  type: {{ .Values.service.type }}
   ports:
   - protocol: TCP
     port: 80
