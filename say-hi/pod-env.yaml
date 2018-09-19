@@ -12,6 +12,6 @@ spec:
     image: eu.gcr.io/sap-p-and-i-big-data-vora/k8s-examples/say-hi:latest
     ports:
     - containerPort: 5000
-  env:
-  - name: NAME
-    value: berry
+    env:
+    - name: NAME
+      value: berry
