@@ -1,0 +1,13 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: say-hi-ext
+spec:
+  selector:
+    app: say-hi
+    name: berry
+  type: LoadBalancer
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 5000
