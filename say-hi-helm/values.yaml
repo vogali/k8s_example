@@ -11,3 +11,5 @@ ingress:
   enabled: false
   url:
 
+redis:
+  password: Sapvora123
