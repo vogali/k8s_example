@@ -21,8 +21,8 @@ def flag():
     count = r.incr('pv', 1)
     if count == 30:
         flag = r.get('flag')
-        return "Bingo~ You got it: keep-secret\r\n"
-    return "Your access no is %d, try harder, the flag is hidden at 30" % count
+        return "Bingo~ You got the flag: keep-secret\r\n"
+    return "Your access no is %d, try harder! the flag is hidden at 30\r\n" % count
 
 
 if __name__ == '__main__':
